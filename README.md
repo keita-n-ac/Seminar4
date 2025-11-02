@@ -14,4 +14,4 @@
 | 5 | 2025年10月30日 | 復習4 | https://github.com/keita-n-ac/Seminar4/blob/main/seminar4-4-ex.md | 
 | 6 | 2025年11月6日 | 復習5 | https://github.com/keita-n-ac/Seminar4/blob/main/seminar4-5-ex.md | 
 | - | 2025年11月13日 | 休講 | なし | 
-| 7 | 2025年11月13日 | 復習6 |  | 
+| 7 | 2025年11月20日 | 復習6 |  | 
