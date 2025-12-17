@@ -22,5 +22,5 @@
 | 11 | 2025年12月18日 | 最終演習 | https://github.com/keita-n-ac/Seminar4/blob/main/seminar4-final.md | 
 | 12 | 2026年1月8日 | 最終演習 | https://github.com/keita-n-ac/Seminar4/blob/main/seminar4-final.md | 
 | 13 | 2026年1月15日 | 最終演習 | https://github.com/keita-n-ac/Seminar4/blob/main/seminar4-final.md | 
-| 14 | 2026年1月29日 | 演習プレゼン作成 | https://github.com/keita-n-ac/Seminar4/blob/main/seminar4-final.md | 
+| 14 | 2026年1月29日 | 演習プレゼン作成 | なし | 
 | 15 | 2026年1月29日（補講） | 演習内容発表 | なし | 
