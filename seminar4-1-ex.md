@@ -139,7 +139,7 @@ len`関数を使って、文字列`s='文字列のサンプル'`の長さを「�
 `in`演算子：`l2=['First','Second','Third']` に `'Second'` と `'Forth'` が含まれるかを True/False で表示せよ
 
 ## 30) 
-for-each ループで `l2=['First','Second','Third']` の各要素を1行ずつ表示せよ
+for-each(forとin) ループで `l2=['First','Second','Third']` の各要素を1行ずつ表示せよ
 
 ## 31) 
 添字ループ：`range(len(l2))` を使って `0 First` のように「インデックス 値」を各行で表示せよ
