@@ -5,7 +5,7 @@ Pythonでは，文字の中に変数の値を入れて表示したい場面が�
 以下のプログラムを書くことがあります．
 
 ```python
-name = "田中"
+name = '田中'
 age = 20
 print(name + 'さんは' + str(age)+ '歳です')
 ```
@@ -15,7 +15,7 @@ print(name + 'さんは' + str(age)+ '歳です')
 - stringは文字列という意味で使用されます．
 
 ```python
-name = "田中"
+name = '田中'
 age = 20
 print(f'{name}さんは{age}歳です')
 ```
@@ -342,11 +342,11 @@ encoding='utf-8'
 例えば，
 
 ```python
-with open("sample.txt", "r", encoding="utf-8") as file:
+with open('file1.txt', 'r', encoding='utf-8') as file:
     text = file.read()
 ```
 
-では，`sample.txt` をUTF-8として読み込んでいます．
+では，`file1.txt` をUTF-8として読み込んでいます．
 
 ---
 
