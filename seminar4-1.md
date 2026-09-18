@@ -342,11 +342,11 @@ encoding='utf-8'
 例えば，
 
 ```python
-with open("sample.txt", "r", encoding="utf-8") as file:
+with open('file1.txt', 'r', encoding='utf-8') as file:
     text = file.read()
 ```
 
-では，`sample.txt` をUTF-8として読み込んでいます．
+では，`file1.txt` をUTF-8として読み込んでいます．
 
 ---
 
