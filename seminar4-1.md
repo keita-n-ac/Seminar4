@@ -5,7 +5,7 @@ Pythonでは，文字の中に変数の値を入れて表示したい場面が�
 以下のプログラムを書くことがあります．
 
 ```python
-name = "田中"
+name = '田中'
 age = 20
 print(name + 'さんは' + str(age)+ '歳です')
 ```
@@ -15,7 +15,7 @@ print(name + 'さんは' + str(age)+ '歳です')
 - stringは文字列という意味で使用されます．
 
 ```python
-name = "田中"
+name = '田中'
 age = 20
 print(f'{name}さんは{age}歳です')
 ```
