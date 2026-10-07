@@ -14,4 +14,5 @@
 ### 解答例
 | 回数 | 日付         | 内容 | 資料ページ | 
 |---|------------|------|---| 
-| 1 | 2026年10月1日 | f-string/fileio |  |
+| 1 | 2026年10月1日 | f-string/fileio | https://github.com/keita-n-ac/Seminar4/blob/main/seminar4-1-ans.md |
+| 2 | 2026年10月8日 | 形態素解析準備 |  | 
