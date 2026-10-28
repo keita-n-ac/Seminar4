@@ -861,7 +861,7 @@ pd
 
 ##### 問題4
 
-pandasを使って`tourism.csv`を読み込み，
+pandasを使って`tourism-6.csv`を読み込み，
 
 ```python
 df
