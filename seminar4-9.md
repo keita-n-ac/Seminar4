@@ -916,7 +916,8 @@ plt.show()
 ```python
 sns.histplot(
     data=df,
-    x="spending"
+    x="spending",
+    color="steelblue"
 )
 
 plt.title("消費金額の分布")
@@ -926,12 +927,24 @@ plt.ylabel("件数")
 plt.show()
 ```
 
+ヒストグラムは，数値データをいくつかの区間に分けて，それぞれの区間に含まれるデータ数を表示するグラフです．
+
+今回は，
+
+```python
+color="steelblue"
+```
+
+を指定して，ヒストグラムの色を設定しています．
+
 matplotlibでは，
 
 ```python
 plt.hist(
     df["spending"]
 )
+
+plt.show()
 ```
 
 でした．
@@ -941,11 +954,17 @@ seabornでは，
 ```python
 sns.histplot(
     data=df,
-    x="spending"
+    x="spending",
+    color="steelblue"
 )
+
+plt.show()
 ```
 
 となります．
+
+どちらも消費金額の分布を確認するために使用できます．
+
 
 ---
 
@@ -1727,13 +1746,20 @@ DataFrameの行数・列数と，列名をすべて表示してください．
 
 ##### 問題16　消費金額のヒストグラムを作る
 
+##### 問題16　消費金額のヒストグラムを作る
+
 `spending` の分布を `sns.histplot()` で表示してください．
 
 区間数は `bins=10` としてください．
 
+次の条件を満たしてください．
+
 - 横軸：「消費金額（円）」
 - 縦軸：「件数」
 - タイトル：「消費金額の分布」
+- ヒストグラムの色：「steelblue」
+
+ヒント：色は `color="steelblue"` で指定できます．
 
 ---
 
@@ -1788,9 +1814,14 @@ DataFrameの行数・列数と，列名をすべて表示してください．
 
 #### 余裕がある人向け
 
+
 ##### 発展問題1　季節別の消費金額
 
 `season` ごとの平均消費金額を求めて，棒グラフで比較してください．
+
+pandasの `groupby()` と `plot()` を組み合わせる方法でも，seabornの `sns.barplot()` を使う方法でも構いません．
+
+ただし，`sns.barplot()` を使用する場合は，棒グラフの色を `color="steelblue"` で指定してください．
 
 ---
 
