@@ -50,7 +50,17 @@ matplotlib / seaborn
 
 ##### 3. ライブラリの準備
 
-まず，必要なライブラリを読み込みます．
+まず，今回使用するライブラリを準備します．
+
+Google Colabでは，`japanize_matplotlib` がインストールされていない場合があります．
+
+その場合は，次のプログラムを最初に実行してください．
+
+```python
+!pip install japanize-matplotlib
+```
+
+次に，必要なライブラリを読み込みます．
 
 ```python
 import pandas as pd
@@ -81,13 +91,7 @@ sns
 
 `japanize_matplotlib` は，グラフに日本語を表示するために使用します．
 
-Google Colabでインストールされていない場合は，
-
-```python
-!pip install japanize-matplotlib
-```
-
-を最初に実行します．
+これで，グラフを作成するための準備ができました．
 
 ---
 
@@ -410,15 +414,28 @@ plt.ylabel()
 
 ##### 11. pandasとmatplotlibの使い分け
 
-簡単にグラフを確認したい場合には，
+簡単にグラフを確認したい場合には，pandasのグラフ作成機能が便利です．
+
+例えば，来訪者数の分布を確認する場合は，
 
 ```python
-df.plot()
+df["visitors"].plot(
+    kind="hist",
+    bins=10
+)
+
+plt.title("来訪者数の分布")
+plt.xlabel("来訪者数")
+plt.ylabel("件数")
+
+plt.show()
 ```
 
-が便利です．
+のように書くことができます．
 
-細かくグラフを設定したい場合には，
+`kind="hist"` はヒストグラムを作成するという意味です．
+
+一方，細かくグラフを設定したい場合には，
 
 ```python
 plt.bar()
@@ -430,7 +447,7 @@ plt.scatter()
 
 例えば，
 
-**データをすぐ確認したい**
+**データの特徴を簡単に確認したい**
 
 場合にはpandas，
 
@@ -439,6 +456,8 @@ plt.scatter()
 場合にはmatplotlib，
 
 という使い方ができます．
+
+また，pandasで作成したグラフにmatplotlibでタイトルや軸の名前を追加することもできます．
 
 ---
 
@@ -489,22 +508,34 @@ plt.ylabel("平均来訪者数")
 plt.show()
 ```
 
-以前は `for` 文と `if` 文を使用して，
+以前は，リストから条件に合うデータを取り出す場合，`for` 文と `if` 文を使用していました．
+
+例えば，次の4都市のデータがあったとします．
+
+```python
+city = ["札幌", "函館", "旭川", "小樽"]
+visitors = [450, 280, 210, 190]
+```
+
+来訪者数が200人以上のデータを取り出す場合は，
 
 ```python
 selected_city = []
 selected_visitors = []
 
-for i in range(len(cities)):
+for i in range(len(city)):
 
     if visitors[i] >= 200:
-        selected_city.append(cities[i])
+        selected_city.append(city[i])
         selected_visitors.append(visitors[i])
+
+print(selected_city)
+print(selected_visitors)
 ```
 
 のような処理を行っていました．
 
-pandasを使用すると，
+しかし，pandasのDataFrameを使用すると，
 
 ```python
 df[df["visitors"] >= 200]
@@ -769,19 +800,20 @@ sns.barplot(
     data=df,
     x="region",
     y="spending",
-    errorbar=None
+    errorbar=None,
+    color="steelblue"
 )
 
 plt.title("地域別平均消費金額")
 plt.xlabel("地域")
-plt.ylabel("消費金額")
+plt.ylabel("平均消費金額（円）")
 
 plt.show()
 ```
 
 ここで注意する点があります．
 
-`seaborn` の `barplot()` は，同じカテゴリーのデータが複数存在する場合，
+`seaborn` の `barplot()` は，同じカテゴリーのデータが複数存在する場合，既定では，
 
 **平均値**
 
@@ -793,17 +825,38 @@ plt.show()
 sns.barplot(
     data=df,
     x="region",
-    y="spending"
+    y="spending",
+    color="steelblue"
 )
 ```
 
 では，地域ごとの平均消費金額が表示されます．
 
+また，
+
+```python
+errorbar=None
+```
+
+を指定すると，誤差範囲を表示しなくなります．
+
+```python
+color="steelblue"
+```
+
+は，棒グラフの色を指定しています．
+
+このように，seabornでは，pandasで事前に平均値を計算しなくても，カテゴリーごとの平均値を棒グラフで表示できます．
+
 ---
 
 ##### 21. pandasで計算してから描く方法との比較
 
-pandasで同じ処理をすると，
+先ほどは，seabornを使って地域ごとの平均消費金額を表示しました．
+
+同じグラフを，pandasで平均を計算してから作成することもできます．
+
+まず，地域ごとの平均消費金額を求めます．
 
 ```python
 region_spending = df.groupby(
@@ -811,17 +864,19 @@ region_spending = df.groupby(
 )["spending"].mean()
 ```
 
-として，
+次に，棒グラフを作成します．
 
 ```python
 region_spending.plot(
     kind="bar"
 )
 
+plt.title("地域別平均消費金額")
+plt.xlabel("地域")
+plt.ylabel("平均消費金額（円）")
+
 plt.show()
 ```
-
-となります．
 
 一方，seabornなら，
 
@@ -830,15 +885,27 @@ sns.barplot(
     data=df,
     x="region",
     y="spending",
-    errorbar=None
+    errorbar=None,
+    color="steelblue"
 )
+
+plt.title("地域別平均消費金額")
+plt.xlabel("地域")
+plt.ylabel("平均消費金額（円）")
 
 plt.show()
 ```
 
 と書くことができます．
 
-どちらも結果を確認するために使用できます．
+このように，
+
+- pandasでは，平均値を計算してからグラフを作成する
+- seabornでは，グラフを作成するときに平均値を計算させる
+
+という違いがあります．
+
+ただし，どちらも地域ごとの平均消費金額を比較している点は同じです．
 
 ---
 
@@ -1418,7 +1485,12 @@ df.groupby(
 #### pandasでグラフ
 
 ```python
-df.plot()
+df["visitors"].plot(
+    kind="hist",
+    bins=10
+)
+
+plt.show()
 ```
 
 #### matplotlib
