@@ -23,10 +23,10 @@
 
 という処理を行います．
 
-今回も，
+今回は，
 
 ```text
-tourism.csv
+tourism-8.csv
 ```
 
 を使用します．
@@ -41,10 +41,10 @@ tourism.csv
 import pandas as pd
 ```
 
-次に，`tourism.csv`を読み込みます．
+次に，`tourism-8.csv`を読み込みます．
 
 ```python
-df = pd.read_csv("tourism.csv")
+df = pd.read_csv("tourism-8.csv")
 
 df.head()
 ```
@@ -116,6 +116,8 @@ df["category"].value_counts()
 - 観光
 - 飲食
 - 宿泊
+- 買い物
+- イベント
 
 がそれぞれ何件あるのか確認できます．
 
@@ -269,6 +271,8 @@ df.groupby("category")["rating"].mean()
 
 - 観光
 - 飲食
+- 宿泊
+- 買い物
 - 宿泊
 
 それぞれの平均評価を求めることができます．
@@ -918,7 +922,7 @@ pd.merge(
 import pandas as pd
 
 df = pd.read_csv(
-    "tourism.csv"
+    "tourism-8.csv"
 )
 ```
 
@@ -1045,7 +1049,7 @@ city_info
 
 ##### 問題16
 
-`tourism.csv`のデータと`city_info.csv`のデータを，
+`tourism-8.csv`のデータと`city_info.csv`のデータを，
 
 ```text
 city
