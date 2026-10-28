@@ -38,10 +38,10 @@
 
 ##### 1. 今回使うデータ
 
-前回と同じ，
+前回と同じ形式の
 
 ```text
-tourism.csv
+tourism-7.csv 
 ```
 
 を使用します．
@@ -55,7 +55,7 @@ import pandas as pd
 CSVファイルを読み込みます．
 
 ```python
-df = pd.read_csv("tourism.csv")
+df = pd.read_csv("tourism-7.csv")
 
 df.head()
 ```
@@ -120,7 +120,7 @@ df["visitors"] >= 1000
 
 ```text
 True
-False
+True
 True
 ...
 ```
@@ -774,14 +774,14 @@ df.loc[
 
 #### 練習問題
 
-今回も`tourism.csv`を使います．
+練習問題でも`tourism-7.csv`を使います．
 
 まず，
 
 ```python
 import pandas as pd
 
-df = pd.read_csv("tourism.csv")
+df = pd.read_csv("tourism-7.csv")
 ```
 
 を実行してください．
