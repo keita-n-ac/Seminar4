@@ -371,3 +371,9 @@ GeoPandasを使用して `hokkaido_areas.geojson` を読み込み，`gdf` に保
 
 ---
 
+### データ出典・注意
+- 元データ：国土交通省「国土数値情報（行政区域データ）」2026年1月1日時点．
+- 軽量化データ：ricewin/simplify-japan-geojson（CC BY 4.0） https://github.com/ricewin/simplify-japan-geojson
+- 作成用URL：https://raw.githubusercontent.com/ricewin/simplify-japan-geojson/main/GeoJson/01_subprefecture.json
+- 授業用 `hokkaido_areas.geojson` は上記データから `N03_002` ごとに区域をまとめたものです．境界は元データの簡略化を引き継ぎ，厳密な測量・行政判断には使用しません．
+
