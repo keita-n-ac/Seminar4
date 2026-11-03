@@ -1767,7 +1767,7 @@ DataFrameの行数・列数と，列名をすべて表示してください．
 
 タイトルを「地域別消費金額の分布」としてください．
 
-ヒント：`sns.histplot()` の `hue` を使用します．
+ヒント：sns.histplot() の hue="region" と multiple="stack" を使用します．
 
 ---
 
