@@ -12,9 +12,11 @@
 | 6 | 2026年11月5日 | pandas復習1 | https://github.com/keita-n-ac/Seminar4/blob/main/seminar4-6.md | 
 | 7 | 2026年11月12日 | pandas復習2 | https://github.com/keita-n-ac/Seminar4/blob/main/seminar4-7.md | 
 | 8 | 2026年11月19日 | pandas復習3 | https://github.com/keita-n-ac/Seminar4/blob/main/seminar4-8.md | 
-| 9 | 2026年11月26日 | matplotlib, pandas, seabornによるデータ解析 |  | 
+| 9 | 2026年11月26日 | matplotlib, pandas, seabornによるデータ解析 | https://github.com/keita-n-ac/Seminar4/blob/main/seminar4-9.md | 
 | 10 | 2026年12月3日 | GeoPandas1 |  | 
-
+| - | 2026年12月10日 | 休講 | なし | 
+| 11 | 2026年12月17日 | GeoPandas2 |  | 
+| 12 | 2026年12月24日 | GeoPandas3 |  | 
 
 ### 解答例
 | 回数 | 日付         | 内容 | 資料ページ | 
@@ -26,4 +28,8 @@
 | 5 | 2026年10月29日 | matplotlib復習 | https://github.com/keita-n-ac/Seminar4/blob/main/seminar4-5-ans.md | 
 | 6 | 2026年11月5日 | pandas復習1 | https://github.com/keita-n-ac/Seminar4/blob/main/seminar4-6-ans.md | 
 | 7 | 2026年11月12日 | pandas復習2 | https://github.com/keita-n-ac/Seminar4/blob/main/seminar4-7-ans.md | 
-| 8 | 2026年11月19日 | pandas復習3 |  | 
+| 8 | 2026年11月19日 | pandas復習3 | https://github.com/keita-n-ac/Seminar4/blob/main/seminar4-8-ans.md | 
+| 9 | 2026年11月26日 | matplotlib, pandas, seabornによるデータ解析 |  | 
+| 10 | 2026年12月3日 | GeoPandas1 |  | 
+| 11 | 2026年12月17日 | GeoPandas2 |  | 
+| 12 | 2026年12月24日 | GeoPandas3 |  | 
